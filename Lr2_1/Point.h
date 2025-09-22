@@ -1,6 +1,7 @@
 #pragma once
 using namespace std;
 #include <iostream>
+#include <string>
 
 class Point
 {
@@ -19,4 +20,22 @@ public:
 	void Move(int a, int b);
 	void setSk(int k);
 
+	Point& opp() {
+		x++; y++;
+		return *this;
+	}
+	Point& opp2() {
+		x--; y--;
+		return *this;
+	}
+
+	bool equal() {
+		return x == y;
+	}
+	Point addsc(int scalar) {
+		return Point(x + scalar, y + scalar);
+	}
+	string tostr() {
+		return "X: " + to_string(x) + ", Y: " + to_string(y);
+	}
 };
