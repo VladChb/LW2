@@ -32,10 +32,10 @@ public:
 	bool equal() {
 		return x == y;
 	}
-	Point addsc(int scalar) {
+	Point addSc(int scalar) {
 		return Point(x + scalar, y + scalar);
 	}
-	string tostr() {
+	string toStr() {
 		return "X: " + to_string(x) + ", Y: " + to_string(y);
 	}
 };
